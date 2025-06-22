@@ -5,7 +5,12 @@ function StarBackground() {
     const [metors,setMetors]=useState([]);
     useEffect(()=>{
       generateStars()
-      generateMetors()
+      generateMetors();
+      const handleResize=()=>{
+        generateStars()
+      };
+      window.addEventListener('resize',handleResize);
+      return ()=>window.removeEventListener("resize",handleResize);
     },[]);
     const generateStars=()=>{
       const numberOfStars=Math.floor(window.innerWidth*window.innerHeight/10000);
