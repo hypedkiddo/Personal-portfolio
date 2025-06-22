@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import {cn} from "@/lib/utils.js"
-import { Menu } from 'lucide-react';
+import { Menu,X } from 'lucide-react';
 const navItems=[
   {name:"Home",href:"#hero"},
   {name:"About",href:"#about"},
@@ -11,7 +11,7 @@ const navItems=[
 
 function Navbar() {
   const [isScrolled,setIsScrolled]=useState(false);
-  const [isMenuOpen,setisMenuOpen]=useState(false);
+  const [isMenuOpen,setisMenuOpen]=useState(true);
   useEffect(()=>{
     const handleScrolled=()=>{
       setIsScrolled(window.screenY > 10);
@@ -38,12 +38,12 @@ function Navbar() {
         }
       </div>
       {/* mobile nav */}
-      <button>{isMenuOpen ? <X size={24}></X> : <Menu size={24}/>}</button>
+      <button className='md:hidden z-50 p-2 text-foreground' onClick={()=>setisMenuOpen((prev)=>!prev)}>{isMenuOpen ? <X size={24}></X> : <Menu size={24}/>}</button>
       <div className={cn('fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden ', isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none")}>
       <div className='flex flex-col  space-y-8 text-xl'>
         {
           navItems.map((item,key)=>(
-            <a key={key} href={item.href} className='text-2xl text-foreground/80 hover:text-primary transition-colors duration-300'>{item.name}</a>
+            <a onClick={ ()=>setisMenuOpen(false)} key={key} href={item.href} className='text-2xl text-foreground/80 hover:text-primary transition-colors duration-300'>{item.name}</a>
           ))
         }
       </div>
