@@ -6,6 +6,8 @@ import HeroSection from '../components/HeroSection'
 import AboutMe from '../components/AboutMe'
 import Skills from '../components/Skills'
 import Projects from '../components/Projects'
+import Contact from '../components/Contact'
+import { Footer } from '../components/Footer'
 function Home() {
   return (
     <div className='min-h-screen bg-background text-foreground overflow-x-hidden'>
@@ -21,8 +23,10 @@ function Home() {
         <AboutMe/>
         <Skills/>
         <Projects/>
+        <Contact/>
         </main>
         {/* Footer        */}
+        <Footer/>
     </div>
   )
 }
