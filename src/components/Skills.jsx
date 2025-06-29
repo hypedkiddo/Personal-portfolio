@@ -4,19 +4,20 @@ import { cn } from "../lib/utils";
 const skills = [
   //Frontend
   { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "React", level: 95, category: "frontend" },
-  { name: "React", level: 95, category: "frontend" },
-  { name: "React", level: 95, category: "frontend" },
+  { name: "React js", level: 60, category: "frontend" },
+  { name: "Javascript", level: 65, category: "frontend" },
+ 
   //Backend
-  { name: "Express", level: 95, category: "backend" },
-  { name: "React", level: 95, category: "frontend" },
-  { name: "React", level: 95, category: "frontend" },
-  { name: "React", level: 95, category: "frontend" },
+  { name: "Express js", level: 60, category: "backend" },
+  { name: "Node js", level: 70, category: "backend" },
+ 
   //Tools
-  { name: "Git/Github", level: 95, category: "tools" },
-  { name: "React", level: 95, category: "frontend" },
-  { name: "React", level: 95, category: "frontend" },
-  { name: "React", level: 95, category: "frontend" },
+  { name: "Git/Github", level: 70, category: "tools" },
+  { name: "Postman", level: 80, category: "tools" },
+  
+  //Database
+  { name: "MongoDb", level: 70, category: "Database" },
+  { name: "My Sql", level: 80, category: "Database" },
 ];
 
 const category=["all","frontend","backend" ,"tools"]
