@@ -6,7 +6,7 @@ const navItems=[
   {name:"About",href:"#about"},
   {name:"Skills",href:"#skills"},
   {name:"Projects",href:"#projects"},
-  {name:"Contacts",href:"#contacts"},
+  {name:"Contacts",href:"#contact"},
 ]
 
 function Navbar() {
