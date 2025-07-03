@@ -7,7 +7,7 @@ const projects = [
     description: "Secure Event Management",
     image: "/projects/project1.jpg",
     tags: ["Javascript","Express js","Node js","MongoDb"],
-    live: "#",
+    live: "https://auraconnect.onrender.com/api/v1/users/register",
     Github: "https://github.com/hypedkiddo/Festify",
   },
   {
@@ -16,7 +16,7 @@ const projects = [
     description: "A full-stack project following MVC architechture",
     image: "/projects/project2.jpg",
     tags: ["Javascript","Express js","Node js","MongoDb"],
-    live: "#",
+    live: "",
     Github: "https://github.com/hypedkiddo/WanderLust",
   },
 ];
