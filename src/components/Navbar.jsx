@@ -11,7 +11,7 @@ const navItems=[
 
 function Navbar() {
   const [isScrolled,setIsScrolled]=useState(false);
-  const [isMenuOpen,setisMenuOpen]=useState(true);
+  const [isMenuOpen,setisMenuOpen]=useState(false);
   useEffect(()=>{
     const handleScrolled=()=>{
       setIsScrolled(window.screenY > 10);
